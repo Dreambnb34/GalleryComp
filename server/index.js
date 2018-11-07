@@ -10,9 +10,9 @@ const PORT = 3000;
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
-app.use(express.static(__dirname + '/../client/public'));
+app.use(express.static(__dirname + '/../client/public/'));
 
-app.get('/:listingID', function(req, res) {
+app.get('/:listingId', function(req, res) {
   res.sendFile(path.join(__dirname + '/../client/public/index.html'));
 });
 
