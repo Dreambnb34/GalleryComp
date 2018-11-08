@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 app.use(express.static(__dirname + '/../client/public/'));
 
-app.get('/:listingId', function(req, res) {
+app.get('/rooms/:listingId', function(req, res) {
   res.sendFile(path.join(__dirname + '/../client/public/index.html'));
 });
 

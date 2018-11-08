@@ -30,7 +30,7 @@ button:hover {
 .arrow {
     align-self: center;
     padding: 15px 20px;
-    border-radius: 50%;
+    border-radius: 10%;
 }
 
 .nextArrow {
@@ -46,8 +46,8 @@ button:hover {
     margin-bottom: 5px;
     left: 0;
     bottom: 0;
-    padding: 13px 13px;
-    border-radius: 50%;
+    padding: 10px 10px;
+    border-radius: 10%;
 }
 
 .gallery {
@@ -102,7 +102,7 @@ button:hover {
     height: 100%;
     width: 100%;
     overflow-y: hidden;
-    background-color: #273131;
+    background-color: white;
     display: flex;
     position: relative;
     justify-content: center;

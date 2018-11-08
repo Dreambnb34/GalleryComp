@@ -3,7 +3,7 @@ import React from 'react';
 const RightArrow = (props) => {
   return (
     <div className="nextArrow">
-      <button className="arrow" onClick={() => props.handleClick()}>&#62;</button>
+      <button className="arrow" onClick={() => props.handleClick()}></button>
     </div>
   );
 };

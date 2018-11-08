@@ -23,15 +23,12 @@ class Gallery extends React.Component {
   }
 
   componentDidMount() {
-    let propId = Number(window.location.pathname.replace(/\//, ''));
+    let propId = Number(window.location.pathname.replace(/\/rooms\//, ''));
+    console.log(propId);
     if (propId > 0 && propId <= 50) {
       $.get('/gallery/' + propId, result => {
         this.setState({view: 'gallery', currentPropertyId: propId, photos: result, currentPhoto: 0, isExpanded: false});
       });
-    } else {
-      $.get('gallery', result => {
-        this.setState({currentPropertyId: result[1]});
-      }, 'json');
     }
   }
 
