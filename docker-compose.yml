@@ -1,0 +1,15 @@
+version: '3'
+services:
+  gallery:
+    container_name: gallery-server
+    restart: always
+    build: .
+    ports:
+      - '3000:9999'
+    links:
+      - 'mongo'
+  db:
+    container_name: gallery-db
+    image: mongo
+    ports:
+      - '27017:27017’
