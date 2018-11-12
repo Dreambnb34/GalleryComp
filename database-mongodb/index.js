@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
-const mongoUri = 'mongodb://localhost:27017/description';
 
-const db = mongoose.connect(mongoUri);
+const db = mongoose.connect(process.env.MONGOLAB_URI);
 
 module.exports = db;
