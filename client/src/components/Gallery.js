@@ -26,8 +26,11 @@ class Gallery extends React.Component {
     let propId = Number(window.location.pathname.replace(/\/rooms\//, ''));
     if (propId > 0 && propId <= 100) {
       $.get('/gallery/' + propId, result => {
+        console.log(result, 'changed');
         this.setState({view: 'gallery', currentPropertyId: propId, photos: result, currentPhoto: 0, isExpanded: false});
       });
+    } else {
+      console.log('this is the outside');
     }
   }
 

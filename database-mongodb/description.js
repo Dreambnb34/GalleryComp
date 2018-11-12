@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const db = require('./index.js');
 mongoose.Promise = global.Promise;
+mongoose.connect(process.env.MONGOLAB_URI);
 
 const descriptionSchema = new mongoose.Schema({
   photoID: Number,
@@ -9,5 +10,5 @@ const descriptionSchema = new mongoose.Schema({
   picCaption: String,
 });
 
-const Description = mongoose.model('Description', descriptionSchema);
+const Description = mongoose.model('gallerys', descriptionSchema);
 module.exports = Description;
